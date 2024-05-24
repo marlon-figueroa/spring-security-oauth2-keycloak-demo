@@ -1,16 +1,13 @@
 <!doctype html>
 <html lang="en" class="h-100">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
-
-    <!-- Bootstrap core CSS -->
-    <!-- Bootstrap core CSS -->
-    <!-- jQueryUI (autocomplete) -->
+    <title>App Demo KeyCloak</title>
     <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <!-- Icons fontawesome -->
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous" rel="stylesheet" />
@@ -20,17 +17,17 @@
 
     <style>
         .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
 
         @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
         }
     </style>
 
@@ -38,49 +35,57 @@
     <!-- Custom styles for this template -->
     <link th:href="@{/css/sticky-footer-navbar.css}" rel="stylesheet">
 </head>
+
 <body class="d-flex flex-column h-100">
 
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Demo Oauth2 Thymeleaf y KeyCloak</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <a class="nav-link active" aria-current="page" th:href="@{/home}"><i class="fas fa-user"></i><span class="" th:text="${usuario}"></span></a>
-                    <a class="btn btn-outline-info" th:href="@{/logout}">Logout</a>
-                </form>
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Demo Oauth2 Thymeleaf y KeyCloak</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a class="nav-link" aria-current="page" th:href="@{/home}"><i
+                                class="fas fa-user"></i>&nbsp;<span class="" th:text="${usuario}"></span></a>
+                        <a class="btn btn-outline-info" th:href="@{/logout}">Logout</a>
+                    </form>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Aplicación para usos demostrativos</h1>
+            <p class="lead">Para uso demostrativo sobre como configurar un cliente en una aplicacion Java Web con
+                SpringBoot 3, Oauth2 y KeyCloak</p>
+            <p><strong>ATRIBUTOS</strong></p>
+            <p th:text="${atributos}"></p>
+            <p><strong>AUTORIZACIONES</strong></p>
+            <p th:text="${autorizaciones}"></p>
         </div>
-    </nav>
-</header>
+    </main>
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-    <div class="container">
-        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-        <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
-    </div>
-</main>
-
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <span class="text-muted">Grupo #2 Seguridad Informatica</span>
-    </div>
-</footer>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Grupo #2 Seguridad Inform&aacute;tica</span>
+        </div>
+    </footer>
 
 
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 
 
 </body>
+
 </html>
